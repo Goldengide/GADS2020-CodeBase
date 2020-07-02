@@ -94,10 +94,6 @@ let content = document.getElementById('timetable');
 
 times = 0;
 setInterval(function() {
-    times++;
-    if(times < 3) {
-        (modify(data));
-    }
     display(data);
     
 }, 5000);
