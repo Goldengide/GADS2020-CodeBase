@@ -18,7 +18,7 @@ class Alarm {
         let alarms = [
             {
                 id: '1',
-                label: "Morning",
+                label: "Breakfast",
                 seconds: 0,
                 hours: 8,
                 hoursText: "8am",
@@ -26,7 +26,7 @@ class Alarm {
             },
             {
                 id: 2,
-                label: "Afternoon",
+                label: "Lunch",
                 seconds: 0,
                 hours: 14,
                 hoursText: "2pm",
@@ -34,7 +34,7 @@ class Alarm {
             },
             {
                 id: 3,
-                label: "Evening",
+                label: "Dinner",
                 seconds: 0,
                 hours: 20,
                 hoursText: "8pm",
