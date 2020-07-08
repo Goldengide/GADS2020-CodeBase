@@ -1,0 +1,14 @@
+[
+    {
+        "hour": 4,
+        "min": 34,
+        "sec": 54,
+        "src":  "/resources/img/picture_a"
+    },
+    {
+        "src":  "/resources/img/picture_b"
+    },
+    {
+        "src":  "/resources/img/picture_c"
+    }
+]

@@ -92,7 +92,7 @@ class DynamicTable {
             text1 = document.createTextNode(element.day);
             text2 = document.createTextNode(element.topic);
             column1.setAttribute("scope", "row");
-            column1.setAttribute("style", "width:20%");
+            column1.setAttribute("style", "width:10%");
             column1.appendChild(text1);
             column2 = document.createElement('td');
             column2.appendChild(text2);
