@@ -22,7 +22,7 @@ class Alarm {
                 seconds: 0,
                 hours: 8,
                 hoursText: "8am",
-                src: "../resources/img/alarm/alarmclock.png"
+                src: "../resources/img/alarm/alarm-1.jpg"
             },
             {
                 id: 2,
@@ -30,7 +30,7 @@ class Alarm {
                 seconds: 0,
                 hours: 14,
                 hoursText: "2pm",
-                src: "../resources/img/alarm/alarm_clock.jpg"
+                src: "../resources/img/alarm/alarm-2.jpg"
             },
             {
                 id: 3,
@@ -38,7 +38,7 @@ class Alarm {
                 seconds: 0,
                 hours: 20,
                 hoursText: "8pm",
-                src: "../resources/img/alarm/alarm_clock.jpg"
+                src: "../resources/img/alarm/alarm-3.jpg"
             }
         ];
         alarms.forEach(alarm => {
