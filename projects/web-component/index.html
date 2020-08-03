@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 10em;
+            height: 10em;
+            /* background-color:or; */
+            margin: 1rem;
+            float: left;
+            border: #eee solid .5em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is a boy</h1>
+    <chinyere-comments></chinyere-comments>
+    <button onclick="exclaim()">Print</button><br>
+    <template>
+        <div class="box"></div>
+    </template>
+    <script>
+        color = ['orange', 'peru', 'green', 'magenta', 'orchid', 'orangered'];
+        index = 0;
+        bgIndex = 3;
+        function exclaim() {
+            if (index === (color.length - 1)) {
+                index = 0;
+                // bgIndex = 2;
+            }
+            let show = document.querySelector('template');
+
+            // the idea is that each box should have adifferent color;
+            let clone = document.importNode(show.content, true);
+            clone.querySelector('.box').style.borderColor = color[index];
+            // clone.querySelector('.box').style.backgroundColor = color[bgIndex];
+            ++index;
+            ++bgIndex;
+            document.body.appendChild(clone);
+        }
+
+        let ChinyereCommentPrototype = Object.create(HTMLElement.prototype);
+
+        ChinyereCommentPrototype.createdCallback = function () {
+            this.innerHTML = "<h2>Chinyere</h2><textarea></textarea><br><button type='submit'>Submit</button"
+        }
+        ChinyereComment = document.registerElement('chinyere-comments', {
+            prototype: ChinyereCommentPrototype
+        });
+
+    </script>
+</body>
+
+</html>

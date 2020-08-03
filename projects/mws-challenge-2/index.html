@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoApp</title>
+    <link rel="stylesheet" href="../resources/frameworks/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../resources/frameworks/material-design-lite/material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <header class="container d-flex flex-column justify-content-center">
+        <h1 id="date" class="py-2 px-1 mt-2 text-center">Thurday, July 18, 2020</h1>
+    </header>
+    <main class="container">
+        <section class="row">
+            <div class="col-sm-6 col-xs-12 pt-5">
+                <form id="add-tasks" class="d-flex flex-column">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="taskTitle" name="title">
+                        <label class="mdl-textfield__label" for="taskTitle">Enter TASK TITLE e.g. Home Chores</label>
+                    </div>
+
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <textarea class="mdl-textfield__input" type="text" rows="3" id="taskContent"
+                            name="content"></textarea>
+                        <label class="mdl-textfield__label" for="taskContent">ENTER TASK DESCRIPTION HERE</label>
+
+                    </div>
+                    <button type="submit"
+                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                        Submit
+                    </button>
+
+                </form>
+            </div>
+            <div class="col-sm-6 col-xs-12" m-0>
+                <div class="mdl-grid my-1">
+                    <div
+                        class="todo-tab mdl-cell mdl-cell--6-col d-flex flex-column justify-content-start align-items-start">
+                        <h5><strong>Loading</strong></h5>
+                        <form id="checklist" action="">
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                <input type="checkbox" id="loading..." class="mdl-checkbox__input">
+                                <span class="mdl-checkbox__label">dancing loading..</span>
+                            </label>
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+    </main>
+    <footer class="d-flex flex-row justify-content-center">this is where the copyright would be</footer>
+</body>
+<script src="../resources/frameworks/jquery/dist/jquery.min.js"></script>
+<script src="../resources/frameworks/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../resources/frameworks/material-design-lite/material.min.js"></script>
+<script src="storage.js"></script>
+<script>
+
+    $('#add-tasks').submit(function (event) {
+        event.preventDefault();
+        var title = document.getElementById('taskTitle').value;
+        var description = document.getElementById('taskContent').value;
+        let data = { title: title, description: description };
+        console.log(data);
+        openDatabase(getData);
+        openDatabase(addData, data);
+        event.onsuccess = async function () {
+
+            // result = await openDatabase(getData);
+            // console.log(result);
+        }();
+    });
+
+</script>
+
+</html>
