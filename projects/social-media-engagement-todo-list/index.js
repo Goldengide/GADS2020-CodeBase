@@ -114,5 +114,5 @@ class DynamicTable {
 test = new DynamicTable(data);
 setInterval(function() {
     test.display();
-}, 5000);
+}, 3600000);
 // test.display();
