@@ -1,0 +1,17 @@
+.side-image {
+    height: 30em;
+}
+
+.banner {
+    height: 20em;
+    background-position: right, center;
+    background-image: url(../img/wall-paper/erhabor-efosa.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-color: #333; */
+}
+.nav-item-2 {
+    list-style-type: none;
+    margin-left: .5em;
+    margin-right: .5em;
+}
