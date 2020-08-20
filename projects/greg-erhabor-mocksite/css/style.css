@@ -1,3 +1,6 @@
+.gray {
+    color: #000;
+}
 .side-image {
     height: 30em;
 }
@@ -10,8 +13,49 @@
     background-repeat: no-repeat;
     /* background-color: #333; */
 }
+.banner nav ul.profile {
+    display: flex;
+    flex-direction: row;
+  }
+
+.banner h2 {
+    width: 75%;
+}
+.introduction {
+
+}
 .nav-item-2 {
     list-style-type: none;
     margin-left: .5em;
     margin-right: .5em;
 }
+.nav-item-social {
+    list-style-type: none;
+    margin-left: .1em;
+    margin-right: .1em;
+}
+@media (max-width: 576px) {
+    .banner {
+        min-height: 30em;
+        height: 30em;
+        background-position: center center;
+    }
+
+    .banner h1 {
+        text-align: center;
+        margin: 0;
+    }
+    .banner nav ul.profile {
+        margin: 0;
+        background-position: center;
+        background-attachment: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .introduction {
+    
+    }
+  }
