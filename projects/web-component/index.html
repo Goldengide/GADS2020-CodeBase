@@ -27,20 +27,16 @@
     <script>
         color = ['orange', 'peru', 'green', 'magenta', 'orchid', 'orangered'];
         index = 0;
-        bgIndex = 3;
         function exclaim() {
             if (index === (color.length - 1)) {
                 index = 0;
-                // bgIndex = 2;
             }
             let show = document.querySelector('template');
 
             // the idea is that each box should have adifferent color;
             let clone = document.importNode(show.content, true);
             clone.querySelector('.box').style.borderColor = color[index];
-            // clone.querySelector('.box').style.backgroundColor = color[bgIndex];
             ++index;
-            ++bgIndex;
             document.body.appendChild(clone);
         }
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Dom</title>
+</head>
+<body>
+    
+    <div id="host">Light DOM</div>
+
+    <script>
+        let host =  document.querySelector('#host');
+        let root1 = host.createShadowRoot();
+        // let root2 = host.createShadowRoot();
+        root1.innerHTML = '<div>First Child</div>';
+        // root2.innerHTML = '<div>Second Child</div>';
+
+        // document.body.appendChild(host);
+
+    </script>
+</body>
+</html>
