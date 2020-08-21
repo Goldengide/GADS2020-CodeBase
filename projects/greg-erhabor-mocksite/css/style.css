@@ -46,6 +46,11 @@
         text-align: center;
         margin: 0;
     }
+
+    .nav-menu-social {
+        flex-direction: column;
+        
+    }
     .banner nav ul.profile {
         margin: 0;
         background-position: center;
