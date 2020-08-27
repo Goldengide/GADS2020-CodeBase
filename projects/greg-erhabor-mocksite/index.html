@@ -31,7 +31,7 @@
       <div class="container">
 
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Greg Erhabor</a>
 
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -99,11 +99,12 @@
         <div class="waves-effect mask rgba-black-slight">
           <nav class="container-fluid mt-5 pt-5">
             <ul class="profile">
-              <li class="nav-item-2"><button type="button" class="btn btn-primary waves-effect">Husband</button></li>
-              <li class="nav-item-2"><button type="button" class="btn btn-info waves-effect">Father</button></li>
-              <li class="nav-item-2"><button type="button" class="btn btn-danger waves-effect">Physician</button></li>
-              <li class="nav-item-2"><button type="button" class="btn btn-info waves-effect">Life Coach</button></li>
-              <li class="nav-item-2"><button type="button" class="btn btn-warning waves-effect">Pastor</button></li>
+              <li class="nav-item-2 profile-definition">I am a</li>
+              <li class="nav-item-2 py-2"><a href = "#!" class="profile-items underline-default">Husband</a><span class="visible-sm visible-xs comma">,</span></li>
+              <li class="nav-item-2 py-2" ><a href = "#!" class="profile-items underline-default">Father</a><span class="visible-sm visible-xs comma">,</span></li>
+              <li class="nav-item-2 py-2"><a href = "#!" class="profile-items underline-default">Physician</a><span class="visible-sm visible-xs comma">,</span></li>
+              <li class="nav-item-2 py-2"><a href = "#!" class="profile-items underline-default">Life Coach</a><span class="visible-sm visible-xs comma">,</span></li>
+              <li class="nav-item-2 py-2"><a href = "#!" class="profile-items underline-default">Pastor</a><span class="visible-sm visible-xs comma"></span></li>
             </ul>
           </nav>
   
@@ -122,8 +123,9 @@
           <row>
             <h1 style="width: 100%;">Greg Erhabor</h1>
             <h4 class="d-lg-block d-md-block d-none">"Never make a case against yourself, God won't make a case against you"</h4>
-          </row>
-
+            
+          </row> <br><br>
+            
 
         </div>
 
@@ -147,7 +149,7 @@
               <img src="img/message-icon/podcast.jpg" class="card-img-top"
                 alt="">
               <a href="#">
-                <div class="mask rgba-black-strong"></div>
+                <div class="mask rgba-white-light"></div>
               </a>
             </div>
 
@@ -177,7 +179,7 @@
               <img src="img/message-icon/iHope.jpg" class="card-img-top"
                 alt="">
               <a href="#">
-                <div class="mask rgba-black-strong"></div>
+                <div class="mask rgba-white-light"></div>
               </a>
             </div>
 
@@ -208,7 +210,7 @@
               <img src="img/message-icon/blog.jpg" class="card-img-top"
                 alt="">
               <a href="#">
-                <div class="mask rgba-black-strong"></div>
+                <div class="mask rgba-white-light"></div>
               </a>
             </div>
 
@@ -259,7 +261,13 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+  <script type="text/javascript">
+
+    var touch = document.getElementById('touch');
+    touch.addEventListener('mouseover', event => {
+      touch.hide();
+    })
+  </script>
 
 </body>
 

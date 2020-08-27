@@ -40,6 +40,7 @@
         min-height: 30em;
         height: 30em;
         background-position: center center;
+        background-image: url(../img/wall-paper/erhabor-efosa-mobile.png);
     }
 
     .banner h1 {
@@ -65,3 +66,43 @@
     
     }
   }
+.underline-primary {
+    border-bottom: #007bff solid thin;
+}
+.underline-info {
+    border-bottom: #17a2b8 solid thin;
+}
+.underline-warning {
+    border-bottom: #ffc107 solid thin;
+}
+.underline-danger {
+    border-bottom: #dc3545 solid thin;
+}
+.profile-items {
+    color: #000000;
+    text-transform: capitalize;
+    font-size: larger;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.underline-default {
+    border-bottom: #333333 solid thick;
+}
+.underline-default:hover {
+    border-bottom: #000000 solid thick;
+}
+.profile-definition {
+    text-align: start;
+    font-size: xx-large;
+
+}
+.comma {
+    font-size: x-large;
+    font-weight: 900;
+}
+
+.profile-items:hover {
+    color: #F6684F;
+}
