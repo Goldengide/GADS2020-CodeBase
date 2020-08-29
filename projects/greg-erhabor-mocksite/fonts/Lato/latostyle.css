@@ -17,6 +17,9 @@ body {
 .text-bold {
 	font-family: LatoWebSemibold;
 }
+.text-bolder {
+	font-family: LatoWebBold;
+}
 #nav {
 	font-family: "LatoWeb";
 	background-color: none;
