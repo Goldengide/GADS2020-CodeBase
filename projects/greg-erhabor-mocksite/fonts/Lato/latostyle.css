@@ -13,6 +13,10 @@ body {
     left: 0;
 	
 }
+
+.text-bold {
+	font-family: LatoWebSemibold;
+}
 #nav {
 	font-family: "LatoWeb";
 	background-color: none;
