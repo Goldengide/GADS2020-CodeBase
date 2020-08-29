@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function add(first, second) {
+            return first + second;
+        } 
+
+        function mul(first, second) {
+            return first * second;
+        } 
+
+        function sub(first, second) {
+            return first - second;
+        } 
+
+        function div(first, second) {
+            return first / second;
+        } 
+
+        function liftf (binary){
+            return function(first) {
+                return function(second) {
+                    return binary(first, second);
+                }
+            }
+        }
+        function curry (binary, first){
+            return function(second) {
+                return binary(first, second);
+            }
+        }
+
+    
+
+        // function mul(first);
+        var addf = liftf(add)(1);
+        inc = addf
+        console.log(inc(inc(inc(2))));
+        // console.log(curry(mul, 13)(4));
+    </script>
+</body>
+</html>
