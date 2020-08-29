@@ -1,0 +1,2 @@
+CSS
+https://css-tricks.com/lodge/svg/09-svg-data-uris/
