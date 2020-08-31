@@ -1,6 +1,7 @@
-body {
-    /* font-family: Lato Web; */
-}
+.dark {
+    background-color: #333;
+    color: #fff;
+  }
 .gray {
     color: #000;
     /* margin: 0.5em; */
@@ -88,6 +89,7 @@ body {
 .underline-danger {
     border-bottom: #dc3545 solid thin;
 }
+.dark .profile-items {color: #fff;}
 .profile-items {
     color: #000000;
     text-transform: capitalize;
@@ -102,9 +104,13 @@ body {
 .underline-default:hover {
     border-bottom: #F6684F solid thick;
 }
+.dark .profile-definition {
+    color: #fff;
+}
 .profile-definition {
     text-align: start;
     font-size: xx-large;
+    color: #000;
 
 }
 .comma {
