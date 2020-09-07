@@ -1,0 +1,143 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+header, main, footer, section {
+    width: 100%;
+}
+
+header h1 {
+    text-align: center;
+    margin:auto;
+    font-size: 3rem;
+    /* padding:2em; */
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+    padding: auto;
+    margin-top: 1em;
+    margin:none;
+    /* background-color: rgba(255, 255, 255, 0.6); */
+}
+.display-content {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+form input[type = 'text'] {
+    transition-property: all;
+    transition-delay: 2ms;
+    transition-duration: 500ms;
+
+    width: 70%;
+    border-bottom: solid thin #fff;
+    font-size: x-large;
+}
+
+
+form input[type = 'text']:focus, form input[type = 'text']:visited  {
+    transition-property: all;
+    transition-delay: 2ms;
+    transition-duration: 500ms;
+    width: 100%;
+    border-bottom: solid medium peachpuff;
+}
+form input[type = 'submit'] {
+    width: 30%;
+}
+
+form input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+article, aside {
+    width: 50%;
+}
+
+.time-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+}
+.time-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.time {
+    border: solid thin #eee;
+    border-radius: 0.2em;
+    padding: 1em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    height: 2em;
+    width: 2em;
+}
+
+.time-label {
+    font-size: 1em;
+}
+
+.place {
+    text-align: center;
+    /* padding-bottom: .1em; */
+    font-size: 1.6em;
+}
+
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* padding: 1em; */
+    padding-top:1em;
+    padding-bottom:1em;
+    font-size: xx-large;
+}
+
+@media(max-width: 576px) {
+    article, aside {
+        width: 100%;
+        float: none;
+        clear: both;
+        margin: none;
+    }
+}
+
+.map-container {
+    height: 25em;
+    /* background-color: #eee; */
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.map-container #map {
+    height: 100%; 
+    background-color: #555; 
+    padding-left:2em; 
+    padding-right: 2em; 
+    margin-left:2em;
+    margin-right: 2em;
+}
+
+#city-pics {
+    height: 20em;
+    background-color: #444;
+    margin-top: .2em;
+}
