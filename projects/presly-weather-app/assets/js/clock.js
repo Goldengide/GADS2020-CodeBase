@@ -8,16 +8,8 @@ function normalize(digit) {
     return digit;
 }
 
-class Clock {
 
-    // Code Plan
-    // Set next time
-    // Set Interval for all the time
-    constructor() {
-        // this
-    }
-
-    showTime() {
+    function showTime() {
         currentTime = new Date();
         document.getElementById('sec').innerText = normalize(currentTime.getSeconds());
         document.getElementById('min').innerText = normalize(currentTime.getMinutes());
@@ -27,11 +19,9 @@ class Clock {
         
     }
 
-    displayTime() {
-        setInterval(this.showTime.bind(this), 1000)
+    function displayTime() {
+        setInterval(showTime.bind(this), 1000)
     };
 
-}
 
-timeObject = new Clock();
-timeObject.displayTime();
+displayTime();
