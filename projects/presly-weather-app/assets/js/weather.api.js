@@ -25,8 +25,6 @@ searchForm.addEventListener('submit', (event) => {
 
 });
 
-icon = document.querySelector('.icon');
-icon.src = "http://openweathermap.org/img/wn/10d@2x.png";
 
 
 async function fetchWeatherAppApiByCity(data) {
