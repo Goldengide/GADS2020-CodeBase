@@ -1,7 +1,7 @@
 
 function createCustomTagProto(shadowElement) {
     currentTime = new Date();
-    console.log(currentTime.getHours());
+    console.log(currentTime);
     function normalize(digit) {
         digit = '' + digit;
         if (digit.length == 1) {
@@ -22,6 +22,7 @@ function createCustomTagProto(shadowElement) {
         clonewatch.querySelector('.sec').innerText = normalize(currentTime.getSeconds());
         clonewatch.querySelector('.min').innerText = normalize(currentTime.getMinutes());
         clonewatch.querySelector('.hour').innerText = normalize(currentTime.getHours());
+        clonewatch.querySelector('#todays-date').innerText = `${currentTime.toDateString()}`;
         shadowRoot.replaceChild(clonewatch, shadowRoot.childNodes[3]);
         
     }, 1000);

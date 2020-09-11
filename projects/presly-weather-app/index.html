@@ -44,65 +44,23 @@
         </section>
         <section class="display-content">
             <article>
-                <!-- <p><i class="fa fa-cloud"></i></p> -->
-                <p class="place" id="city-name">NEW YORK CITY</p>
+                <p class="place"><span id="icon"><img src="http://openweathermap.org/img/wn/04d@2x.png" alt=""></span><span id="city-name">NEW YORK CITY</span> </p>
                 <div class="weather-container">
-                    <div style="margin:auto"><span id="temperature"></span><sup>0</sup><span>C</span></div>
-
+                    <div style="margin:auto"><span id="temperature">000</span><sup>0</sup><span>C</span></div>
                 </div>
                 <digital-watch></digital-watch>
                 
             </article>
             <aside class="side-container">
                 <div id="infometric">
-                    <div class="weather-tables scrollable" id="weather-hours">
-                        <div class="item-wrapper-long">
-                            <span id="weather">120</span><sup>0</sup><span>C</span><br>
-                            <span class="item-wrapper-label">00:00</span>
-                        </div>
-                        <div class="item-wrapper-long">
-                            <span id="weather">110</span><sup>0</sup><span>C</span><br>
-                            <span class="item-wrapper-label">01:00</span>
-                        </div>
-                        <div class="item-wrapper-long">
-                            <span id="weather">100</span><sup>0</sup><span>C</span><br>
-                            <span class="item-wrapper-label">02:00</span>
-                        </div>
-
-                    </div>
-                    <div class="weather-tables">
-                        <div id="weather-info"></div>
-                        <div class="item-wrapper">
-                            <span id="weather">120</span><sup>0</sup><span>C</span><br>
-                            <span class="item-wrapper-label">MON</span>
-                        </div>
-                        <div class="item-wrapper">
-                            <span id="weather">110</span><sup>0</sup><span>C</span><br>
-                            <span class="item-wrapper-label">TUE</span>
-                        </div>
-                        <div class="item-wrapper">
-                            <span id="weather">100</span><sup>0</sup><span>C</span><br>
-                            <span class="item-wrapper-label">WED</span>
-                        </div>
-                        <div class="item-wrapper">
-                            <span id="weather">120</span><sup>0</sup><span>C</span><br>
-                            <span class="item-wrapper-label">THUR</span>
-                        </div>
-                        <div class="item-wrapper">
-                            <span id="weather">110</span><sup>0</sup><span>C</span><br>
-                            <span class="item-wrapper-label">FRI</span>
-                        </div>
-                        <div class="item-wrapper">
-                            <span id="weather">100</span><sup>0</sup><span>C</span><br>
-                            <span class="item-wrapper-label">SAT</span>
-                        </div>
-                        <div class="item-wrapper">
-                            <span id="weather">120</span><sup>0</sup><span>C</span><br>
-                            <span class="item-wrapper-label">SUN</span>
-                        </div>
-
-
-
+                    <div class="weather-tables scrollable" id="weather-days">
+                        <div class="item-wrapper-link"><a href="http://" class="item-wrapper-label">MON</a></div>
+                        <div class="item-wrapper-link"><a href="http://" class="item-wrapper-label">TUE</a></div>
+                        <div class="item-wrapper-link"><a href="http://" class="item-wrapper-label">WED</a></div>
+                        <div class="item-wrapper-link"><a href="http://" class="item-wrapper-label">THUR</a></div>
+                        <div class="item-wrapper-link"><a href="http://" class="item-wrapper-label">FRI</a></div>
+                        <div class="item-wrapper-link"><a href="http://" class="item-wrapper-label">SAT</a></div>
+                        <div class="item-wrapper-link"><a href="http://" class="item-wrapper-label">SUN</a></div>
                     </div>
                 </div>
             </aside>
@@ -138,9 +96,9 @@
         <style>
             .time-space {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: center;
-                /* align-items: center; */
+                align-items: center;
             }
 
             .time-wrapper {
@@ -157,6 +115,10 @@
                 margin-right: 0.4em;
                 height: 2em;
                 width: 2em;
+            }
+            #todays-date {
+                font-size: xx-large;
+                font-size-adjust: initial;
             }
 
             .item-wrapper-long {
@@ -194,6 +156,9 @@
                 <!-- <script src="assets/js/clock.js"></script> -->
 
 
+            </div>
+            <div class="time-wrapper">
+                <span id="todays-date">Friday</span>
             </div>
 
         </div>

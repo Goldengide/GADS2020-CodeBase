@@ -9,17 +9,24 @@ searchForm.addEventListener('submit', (event) => {
     }
     fetchWeatherAppApiByCity(cityData).then(data => {
         console.log(data);
-        // jsonData = JSON.stringify(data);
-        // console.log(jsonData);
-        let insertPoint;
-        temperature = document.getElementById('temperature')
+        // icon.src = "http://openweathermap.org/img/wn/04n@2x.png";
+        // icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        // console.log(data.weather[0].icon);
+        // console.log(icon.src);
+        icon = document.getElementById('icon');
+        icon.innerHTML = `<img class="icon" src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt=""></img>`;
+        console.log(icon); 
+        temperature = document.getElementById('temperature');
         temperature.innerHTML = data.main.temp;
         city = document.getElementById('city-name')
         city.innerHTML = data.name + "<sup>" +data.sys.country + "</sup>";
     });
     console.log(cityName.value);
 
-})
+});
+
+icon = document.querySelector('.icon');
+icon.src = "http://openweathermap.org/img/wn/10d@2x.png";
 
 
 async function fetchWeatherAppApiByCity(data) {
