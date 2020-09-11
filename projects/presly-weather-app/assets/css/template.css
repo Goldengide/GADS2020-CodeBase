@@ -31,6 +31,19 @@ section {
     width: 100%;
 }
 
+.display-error {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: #999;
+    width: 100%;
+    font-size: x-large;
+}
+
+.dont-display-error {
+    display: none;
+}
+
 form {
     width: 100%;
     display: flex;
@@ -239,6 +252,9 @@ article, aside {
     margin-top: 1em;
     /* scrollbar-b */
     
+}
+.another-weather-info #description {
+    text-transform: capitalize;
 }
 
 .scrollable {

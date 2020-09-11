@@ -22,6 +22,7 @@
     <meta name="theme-color" content="#333333">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.css">
     <!-- Including Font Axis -->
     <link rel="stylesheet" href="vendor/fonts/axis/style.css">
     <!-- Your custom styles (optional) -->
@@ -41,6 +42,10 @@
                 <!-- <label for="form3">Your name</label> -->
                 <button type="submit"><i class="fas fa-search fa-3x "></i></button>
             </form>
+        </section>
+        <section class="display-error" id="error-message">
+            <p style='text-align: center'>Looks like you are not connected to the internet, please check your internet
+                connection and try again</p>
         </section>
         <section class="display-content">
             <article>
@@ -78,16 +83,17 @@
             <aside class="side-container">
                 <section id="infometric">
                     <div class="weather-tables" id="other-weather-infos">
-                        <div class="another-weather-info"><span>Feels Likes: </span><span><span
-                                    id="feels_like">26</span><sup>0</sup><span>C</span></span></div>
-                        <div class="another-weather-info"><span>Humidity: </span><span><span
-                                    id="humidity">26</span><span>%</span></span></div>
-                        <div class="another-weather-info"><span>Pressure: </span><span><span
-                            id="pressure">26</span><span>hPa</span></span></div>
-                        <div class="another-weather-info"><span>Wind: </span><span><span
-                            id="wind-speed">26</span><span>m/s</span></span></div>
-                            <div class="another-weather-info"><span>Description</span><span><span
-                                id="description">26</span></div>
+                        <div class="another-weather-info"><span><i class='wi wi-thermometer'> </i>
+                                Feels Likes: </span><span><span id="feels_like"></span><sup>0</sup><span>C</span></span>
+                        </div>
+                        <div class="another-weather-info"><span><i class='wi wi-humidity'></i> Humidity:
+                            </span><span><span id="humidity"></span><span>%</span></span></div>
+                        <div class="another-weather-info"><span><i class='wi wi-barometer'></i> Pressure:
+                            </span><span><span id="pressure"></span><span>hPa</span></span></div>
+                        <div class="another-weather-info"><span><i class='wi wi-strong-wind'></i> Wind:
+                            </span><span><span id="wind-speed"></span><span>m/s</span></span></div>
+                        <div class="another-weather-info"><span><i class="wi wi-refresh-alt"></i>
+                                Description</span><span><span id="description"></span></div>
                     </div>
                 </section>
 

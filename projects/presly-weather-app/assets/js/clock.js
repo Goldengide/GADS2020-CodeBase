@@ -14,12 +14,10 @@ function normalize(digit) {
         document.getElementById('sec').innerText = normalize(currentTime.getSeconds());
         document.getElementById('min').innerText = normalize(currentTime.getMinutes());
         document.getElementById('hour').innerText = normalize(currentTime.getHours());
-            // document.getElementById('alarm-image').src = alarms[1].src;
-            // console.log(currentTime.hours());
-        
     }
 
     function displayTime() {
+        document.getElementById('todays-date').innerText = currentTime.toDateString();
         setInterval(showTime.bind(this), 1000)
     };
 
