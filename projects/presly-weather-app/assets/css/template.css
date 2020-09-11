@@ -73,22 +73,16 @@ article, aside {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
 }
-.item-link {
-    text-decoration: none;
-    color: white;
-    padding: 1em;
-    margin: auto;
-    height: 1.5em;
-    width: 3em;
-}
+
 .time-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
+
 .item-wrapper {
     border: solid thin #eee;
     padding: 1em;
@@ -97,6 +91,11 @@ article, aside {
     height: 2em;
     width: 2em;
 }
+#todays-date {
+    font-size: xx-large;
+    font-size-adjust: initial;
+}
+
 .item-wrapper-long {
     border: solid thin #eee;
     padding: 1em;
@@ -104,6 +103,22 @@ article, aside {
     margin: 0.2em;
     height: 1.5em;
     width: 3em;
+}
+
+
+.item-wrapper-label {
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+.item-wrapper {
+    border: solid thin #eee;
+    padding: 1em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    height: 2em;
+    width: 2em;
 }
 .item-wrapper-link {
     position: relative;
@@ -127,12 +142,6 @@ article, aside {
     width: 3em;
 }
 
-.item-wrapper-label {
-    font-size: 1em;
-    text-align: center;
-    width: 100%;
-    margin: auto;
-}
 
 .place {
     display: flex;
