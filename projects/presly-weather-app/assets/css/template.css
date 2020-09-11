@@ -192,29 +192,50 @@ article, aside {
 }
 .side-container #infometric {
     height: 100%; 
-    background-color: #555; 
-    padding-left:2em; 
-    padding-right: 2em; 
+    /* background-color: #555;  */
+    padding-left:0; 
+    padding-right:0; 
+    width: 100%;
     /* margin: 2em; */
+
+    
 }
 
+#other-weather-infos  {
+    padding: 0.5em;
+}
+#other-weather-infos .another-weather-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: solid thin #fff;
+    width: 100%;
+    padding-top: .5em;
+    padding-bottom: .5em;
 
+}
 #city-pics {
     height: 20em;
     background-color: #444;
     margin-top: .2em;
 }
-
-.weather-tables {
+#weather-days {
     width: 7em;
+}
+#other-weather-infos {
+    /* width: 100%; */
+}
+.weather-tables {
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     justify-items: center;
     align-items: flex-start;
     flex-wrap: wrap;
     /* height: 100px; */
-    max-height: 100%;
-    min-height: 100%;
+    max-height: 90%;
+    min-height: 90%;
     margin-top: 1em;
     /* scrollbar-b */
     

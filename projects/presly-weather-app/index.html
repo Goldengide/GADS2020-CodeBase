@@ -39,12 +39,13 @@
                 <input type="text" id="city" class="form-control form-control-sm" style="color: white;"
                     placeholder="Search">
                 <!-- <label for="form3">Your name</label> -->
-                <button type="submit" ><i class="fas fa-search fa-3x "></i></button>
+                <button type="submit"><i class="fas fa-search fa-3x "></i></button>
             </form>
         </section>
         <section class="display-content">
             <article>
-                <p class="place"><span id="icon"><img src="http://openweathermap.org/img/wn/04d@2x.png" alt=""></span><span id="city-name">NEW YORK CITY</span> </p>
+                <p class="place"><span id="icon"><img src="http://openweathermap.org/img/wn/04d@2x.png"
+                            alt=""></span><span id="city-name">NEW YORK CITY</span> </p>
                 <div class="weather-container">
                     <div style="margin:auto"><span id="temperature">000</span><sup>0</sup><span>C</span></div>
                 </div>
@@ -62,54 +63,36 @@
                             <span id="sec"></span><br>
                             <span class="item-wrapper-label">SEC</span>
                         </div>
-        
+
                         <!-- <script src="assets/js/clock.js"></script> -->
-        
-        
+
+
                     </div>
                     <div class="time-wrapper">
                         <span id="todays-date">Friday</span>
                     </div>
-        
+
                 </div>
-                
+
             </article>
             <aside class="side-container">
-                <div id="infometric">
-                    <div class="weather-tables scrollable" id="weather-days">
-                        <div class="item-wrapper-link"><a href="" class="item-wrapper-label">MON</a></div>
-                        <div class="item-wrapper-link"><a href="" class="item-wrapper-label">TUE</a></div>
-                        <div class="item-wrapper-link"><a href="" class="item-wrapper-label">WED</a></div>
-                        <div class="item-wrapper-link"><a href="" class="item-wrapper-label">THUR</a></div>
-                        <div class="item-wrapper-link"><a href="" class="item-wrapper-label">FRI</a></div>
-                        <div class="item-wrapper-link"><a href="" class="item-wrapper-label">SAT</a></div>
-                        <div class="item-wrapper-link"><a href="" class="item-wrapper-label">SUN</a></div>
+                <section id="infometric">
+                    <div class="weather-tables" id="other-weather-infos">
+                        <div class="another-weather-info"><span>Feels Likes: </span><span><span
+                                    id="feels_like">26</span><sup>0</sup><span>C</span></span></div>
+                        <div class="another-weather-info"><span>Humidity: </span><span><span
+                                    id="humidity">26</span><span>%</span></span></div>
+                        <div class="another-weather-info"><span>Pressure: </span><span><span
+                            id="pressure">26</span><span>hPa</span></span></div>
+                        <div class="another-weather-info"><span>Wind: </span><span><span
+                            id="wind-speed">26</span><span>m/s</span></span></div>
+                            <div class="another-weather-info"><span>Description</span><span><span
+                                id="description">26</span></div>
                     </div>
-                </div>
-                <div></div>
-            </aside>
-
-        </section>
-        <section id="city-pics" class="display-content">
-            <article>
-                <!-- <p><i class="fa fa-cloud"></i></p> -->
-                <p class="place">NEW YORK CITY</p>
-                <div class="weather-container">
-                    <div style="margin:auto"><span id="weather"></span><sup>0</sup><span>C</span></div>
-
-                </div>
-            </article>
-            <aside class="side-container">
-
-                <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-                <!-- <script
-                        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-                        defer></script> -->
-                <!-- <script src="assets/js/map.api.js"></script> -->
-                <!-- <map name="lagos" class="text-center">Lagos</map> -->
-                <div id="map">This is where the route should be</div>
+                </section>
 
             </aside>
+
         </section>
 
     </main>
@@ -140,6 +123,7 @@
                 height: 2em;
                 width: 2em;
             }
+
             #todays-date {
                 font-size: xx-large;
                 font-size-adjust: initial;
