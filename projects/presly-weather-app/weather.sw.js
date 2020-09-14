@@ -4,6 +4,7 @@ const assets = [
     "/index.html",
     "/assets/css/theme.css",
     "/assets/css/template.css",
+    "/assets/js/init.js",
     "/assets/js/clock.js",
     "/assets/js/weather.api.js",
     "/assets/img/presley-weather-icon.png",
