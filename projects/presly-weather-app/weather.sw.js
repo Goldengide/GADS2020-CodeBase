@@ -1,5 +1,6 @@
-const staticDevWeather = "presley-weather-app";
+const staticDevWeather = "presley-weather-app-v2";
 const assets = [
+    "/",
     "/index.html",
     "/assets/css/theme.css",
     "/assets/css/template.css",
