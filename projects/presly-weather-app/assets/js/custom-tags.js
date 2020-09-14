@@ -24,7 +24,7 @@ function createCustomTagProto(shadowElement) {
         clonewatch.querySelector('.hour').innerText = normalize(currentTime.getHours());
         clonewatch.querySelector('#todays-date').innerText = `${currentTime.toDateString()}`;
         shadowRoot.replaceChild(clonewatch, shadowRoot.childNodes[3]);
-        
+
     }, 1000);
     // shadowRoot = null;
 
