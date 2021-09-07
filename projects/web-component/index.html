@@ -7,8 +7,8 @@
     <title>Document</title>
     <style>
         .box {
-            width: 10em;
-            height: 10em;
+            width: 3em;
+            height: 3em;
             /* background-color:or; */
             margin: 1rem;
             float: left;
@@ -18,14 +18,13 @@
 </head>
 
 <body>
-    <h1>This is a boy</h1>
     <chinyere-comments></chinyere-comments>
-    <button onclick="exclaim()">Print</button><br>
+    <button onclick="exclaim()">Click to create Boxes</button><br>
     <template>
         <div class="box"></div>
     </template>
     <script>
-        color = ['orange', 'peru', 'green', 'magenta', 'orchid', 'orangered'];
+        color = ['orange', 'peru', 'green', 'magenta', 'orchid', 'orangered', 'crimson'];
         index = 0;
         function exclaim() {
             if (index === (color.length - 1)) {
@@ -36,6 +35,8 @@
             // the idea is that each box should have adifferent color;
             let clone = document.importNode(show.content, true);
             clone.querySelector('.box').style.borderColor = color[index];
+            // clone.querySelector('.box').style.backgroundColor = color[index];
+            // clone.querySelector('.box').textContent = "color[index]";
             ++index;
             document.body.appendChild(clone);
         }
