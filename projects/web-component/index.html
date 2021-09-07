@@ -1,61 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript" src="sound-onclick.js"></script>
     <style>
-      
-      button {
-        border-radius: 0.4em;
-        padding: 2em;
-        background-color: transparent;
-        border: solid green thin;
-      }
-      button:hover {
-          background-color: seagreen;
+        .clickers {
+            border-radius: 0.4em;
+            padding: 0.5em;
+            margin: 1em;
+            background-color: transparent;
+            border: solid green thin;
+            /* float: left; */
+            width: 10em;
+            text-decoration: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: larger;
+            color: black;
+        }
+        .clickers:hover {
+            background-color: seagreen;
 
-      }
-      .box {
-        width: 3em;
-        height: 3em;
-        /* background-color:or; */
-        animation-name: stretch;
-        animation-duration: 1.5s;
-        animation-timing-function: ease-out;
-        animation-delay: 0;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-        animation-fill-mode: none;
-        animation-play-state: running;
-        margin: 1rem;
-        float: left;
-        border: #eee solid 0.5em;
-      }
-      @keyframes stretch {
-        0% {
-          transform: scale(0.3);
         }
-        50% {
-            transform: scale(1.0;
+        .box {
+            width: 3em;
+            height: 3em;
+            /* background-color:or; */
+            animation-name: stretch;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-out;
+            animation-delay: 0;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-fill-mode: none;
+            animation-play-state: running;
+            margin: 1rem;
+            float: left;
+            border: #eee solid 0.5em;
         }
-        100% {
-          transform: scale(1.5);
-          background-color: yellow;
+        .controls {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            clear: both;
+            float: none;
+            width: 100%;
         }
-      }
-      
+        @keyframes stretch {
+            0% {
+            transform: scale(0.3);
+            }
+            50% {
+                transform: scale(1.0;
+            }
+            100% {
+            transform: scale(1.5);
+            background-color: yellow;
+            }
+        }
+        
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <chinyere-comments></chinyere-comments>
-    <button onclick="exclaim()">Click to create Boxes</button><br />
+    <div class="controls">
+        <button class="clickers" onclick="exclaim()">Click to create Boxes</button>
+        <button class="clickers" onclick="playclip()">Play Music by Gideon Amowogbaje</button>
+        <button class="clickers" onclick="pauseclip()">Pause</button><br/>
+    </div>
+    <audio id="music">
+        <source src="all_the_way.mp3" type="audio/mpeg">
+        <source src="all_the_way.ogg" type="audio/ogg">
+    </audio>
+    <div id="sounddiv"><bgsound id="sound"></div>
+    
+
     <template>
-      <div class="box"></div>
+        <div class="box"></div>
     </template>
     <script>
-      color = [
+        color = [
         "orange",
         "peru",
         "green",
@@ -65,36 +92,37 @@
         "crimson",
         "darkred",
       ];
-      index = 0;
-      reverseIndex = color.length - 1;
-      function exclaim() {
-        if (index === color.length - 1) {
-          index = 0;
+        index = 0;
+        reverseIndex = color.length - 1;
+        
+        function exclaim() {
+            if (index === (color.length - 1)) {
+                index = 0;
+            }
+            if (reverseIndex === 0) {
+            reverseIndex = color.length - 1;
+            }
+            let show = document.querySelector('template');
+
+            // the idea is that each box should have adifferent color;
+            let clone = document.importNode(show.content, true);
+            clone.querySelector('.box').style.borderColor = color[index];
+            clone.querySelector('.box').style.backgroundColor = color[reverseIndex];
+            // clone.querySelector('.box').textContent = "color[index]";
+            ++index;
+            document.body.appendChild(clone);
         }
-        if (reverseIndex === 0) {
-          reverseIndex = color.length - 1;
+
+        let ChinyereCommentPrototype = Object.create(HTMLElement.prototype);
+
+        ChinyereCommentPrototype.createdCallback = function () {
+            this.innerHTML = "<h2>Chinyere</h2><textarea></textarea><br><button type='submit'>Submit</button>"
         }
-        let show = document.querySelector("template");
+        ChinyereComment = document.registerElement('chinyere-comments', {
+            prototype: ChinyereCommentPrototype
+        });
 
-        // the idea is that each box should have adifferent color;
-        let clone = document.importNode(show.content, true);
-        clone.querySelector(".box").style.borderColor = color[index];
-        clone.querySelector(".box").style.backgroundColor = color[reverseIndex];
-        // clone.querySelector('.box').textContent = "color[index]";
-        ++index;
-        --reverseIndex;
-        document.body.appendChild(clone);
-      }
-
-      let ChinyereCommentPrototype = Object.create(HTMLElement.prototype);
-
-      ChinyereCommentPrototype.createdCallback = function () {
-        this.innerHTML =
-          "<h2>Chinyere</h2><textarea></textarea><br><button type='submit'>Submit</button";
-      };
-      ChinyereComment = document.registerElement("chinyere-comments", {
-        prototype: ChinyereCommentPrototype,
-      });
     </script>
-  </body>
+</body>
+
 </html>
