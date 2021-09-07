@@ -1,56 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .box {
-            width: 3em;
-            height: 3em;
-            /* background-color:or; */
-            margin: 1rem;
-            float: left;
-            border: #eee solid .5em;
-        }
-    </style>
-</head>
+      
+      button {
+        border-radius: 0.4em;
+        padding: 2em;
+        background-color: transparent;
+        border: solid green thin;
+      }
+      button:hover {
+          background-color: seagreen;
 
-<body>
+      }
+      .box {
+        width: 3em;
+        height: 3em;
+        /* background-color:or; */
+        animation-name: stretch;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+        animation-delay: 0;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-fill-mode: none;
+        animation-play-state: running;
+        margin: 1rem;
+        float: left;
+        border: #eee solid 0.5em;
+      }
+      @keyframes stretch {
+        0% {
+          transform: scale(0.3);
+        }
+        50% {
+            transform: scale(1.0;
+        }
+        100% {
+          transform: scale(1.5);
+          background-color: yellow;
+        }
+      }
+      
+    </style>
+  </head>
+
+  <body>
     <chinyere-comments></chinyere-comments>
-    <button onclick="exclaim()">Click to create Boxes</button><br>
+    <button onclick="exclaim()">Click to create Boxes</button><br />
     <template>
-        <div class="box"></div>
+      <div class="box"></div>
     </template>
     <script>
-        color = ['orange', 'peru', 'green', 'magenta', 'orchid', 'orangered', 'crimson'];
-        index = 0;
-        function exclaim() {
-            if (index === (color.length - 1)) {
-                index = 0;
-            }
-            let show = document.querySelector('template');
-
-            // the idea is that each box should have adifferent color;
-            let clone = document.importNode(show.content, true);
-            clone.querySelector('.box').style.borderColor = color[index];
-            // clone.querySelector('.box').style.backgroundColor = color[index];
-            // clone.querySelector('.box').textContent = "color[index]";
-            ++index;
-            document.body.appendChild(clone);
+      color = [
+        "orange",
+        "peru",
+        "green",
+        "magenta",
+        "tomato",
+        "orangered",
+        "crimson",
+        "darkred",
+      ];
+      index = 0;
+      reverseIndex = color.length - 1;
+      function exclaim() {
+        if (index === color.length - 1) {
+          index = 0;
         }
-
-        let ChinyereCommentPrototype = Object.create(HTMLElement.prototype);
-
-        ChinyereCommentPrototype.createdCallback = function () {
-            this.innerHTML = "<h2>Chinyere</h2><textarea></textarea><br><button type='submit'>Submit</button"
+        if (reverseIndex === 0) {
+          reverseIndex = color.length - 1;
         }
-        ChinyereComment = document.registerElement('chinyere-comments', {
-            prototype: ChinyereCommentPrototype
-        });
+        let show = document.querySelector("template");
 
+        // the idea is that each box should have adifferent color;
+        let clone = document.importNode(show.content, true);
+        clone.querySelector(".box").style.borderColor = color[index];
+        clone.querySelector(".box").style.backgroundColor = color[reverseIndex];
+        // clone.querySelector('.box').textContent = "color[index]";
+        ++index;
+        --reverseIndex;
+        document.body.appendChild(clone);
+      }
+
+      let ChinyereCommentPrototype = Object.create(HTMLElement.prototype);
+
+      ChinyereCommentPrototype.createdCallback = function () {
+        this.innerHTML =
+          "<h2>Chinyere</h2><textarea></textarea><br><button type='submit'>Submit</button";
+      };
+      ChinyereComment = document.registerElement("chinyere-comments", {
+        prototype: ChinyereCommentPrototype,
+      });
     </script>
-</body>
-
+  </body>
 </html>
